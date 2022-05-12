@@ -1,0 +1,166 @@
+Les combinacions que vam dir són:
+- Fila guia / cursors
+- Fila superior / fila inferior
+- Ctrl / Alt
+
+Llavors també hi havia:
+- Barra espaiadora per escoltar la veu 
+- Esc per tornar a l'inici del conte
+
+
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Conte per al coneixement bàsic del teclat">
+        <meta name="keywords" content="mecanografia, conta, infantil, inici al teclat, escull la teva aventura">
+        <meta name="author" content="CREDV-ONCE">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title></title>
+        <link rel="icon" href="">
+
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="javascript" href="../js/">
+
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                Esta es la barra de navegación principal del sitio
+            </nav>
+        </header>
+                
+        <main>
+            <section>
+                <article>
+                    <p>
+                        Van jugar tanta estona, que se’ls va fer fosc i van veure sortir la lluna.
+                        Conte contat ja s’ha acabat.
+                    </p>
+                    <a><span class="jaws-hidden">Pitjar una tecla de la línia guia per</span> jugar juntes</a>
+                    <a><span class="jaws-hidden">Pitjar un cursor per</span> nedar fins Mallorca</a>
+                    
+                </article>
+            </section>
+        </main>
+        
+        <aside>
+            <button>Activar so</button>
+        </aside>
+        
+        <footer>
+        Esto es un pie de página
+        </footer>
+    </body>
+</html>
+
+
+
+body{
+    background-color: aquamarine;
+}
+
+main p{
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+main{
+    float: left;
+    width: 60vw;
+    margin-left: 5vw;
+}
+
+main a{
+    font-size: 2em;
+    font-weight: bolder;
+
+    text-decoration: none;
+
+    color: #000;
+}
+
+#right{
+    float: right;
+    margin-right: 15vw;
+}
+
+#left{
+    float: left;
+    margin-left: 10vw;
+}
+
+aside{
+    width: 10vw;
+    margin-left: 10vw;
+    float: left;
+}
+
+aside p, aside input{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button{
+    margin: auto;
+}
+
+.jaws-hidden{
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}
+
+aside p, aside button{
+    width: 100%;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    padding-bottom: 1vh;
+}
+
+/*@media (min-width: 1000px),  handheld and (orientation: portrait) {*/
+
+* {margin:0;}
+header {
+  background: #eee;
+}
+main {
+  background: #ddd;
+}
+aside {
+  background: #ccc;
+}
+header,main,aside {
+  min-height: 100px;
+}
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  main {
+    float: left;
+    width: 60%;
+  }
+  aside {
+    width: 40%;
+    float: left;
+  }
+}
+@media screen and (min-width: 960px) {
+  header, main {
+    max-width: 60%;
+  }
+  aside {
+    width: 40%;
+    position: absolute;
+    top: 0; right: 0;
+    bottom: 0;
+  }
+}
+
+

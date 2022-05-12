@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Conte per al coneixement bàsic del teclat">
+        <meta name="keywords" content="mecanografia, conta, infantil, inici al teclat, escull la teva aventura">
+        <meta name="author" content="CREDV-ONCE">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title></title>
+        <link rel="icon" href="">
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+        <!--<header>
+            <nav>
+                Esta es la barra de navegación principal del sitio
+            </nav>
+        </header>-->
+
+        <main>
+            <div id="aside">
+                <p>Quina ajuda visual utilitzes?</p>
+                
+                <ul>
+                    <li><input type="radio" name="jaws" value="jaws">Jaws</li>
+                    <li><input type="radio" name="jaws" value="zoomtext">ZoomText</li>
+                    <li><input type="radio" name="jaws" value="cap">Cap</li>
+                </ul>
+
+                <button id="voice" disabled>Activar so</button>
+            </div>
+
+            <section>
+                <article>
+                    <p>
+                        Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
+                    </p>
+                    
+                    <div id="btn">
+                        <a role="button" id="left" href="ca/girafa.html" title="Una Girafa"><span class="jaws-hidden"></span> una girafa <br>(línia guia)</a>
+                        <a role="button" id="right" href="ca/conill.html" title="Un Conill"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+
+        <!--<footer>
+        Esto es un pie de página
+        </footer>-->
+
+
+    <script type="text/javascript">
+        $('body').on("keydown", function(e) { 
+            if (e.ctrlKey && e.shiftKey && e.which === 83) {
+                //alert("You pressed Ctrl + Shift + s");
+                document.getElementById("left").click();
+                //$("left").get(0).click();
+
+                e.preventDefault();
+            }
+            if (e.which === 83) {
+                alert("You pressed Ctrl + Shift + s");
+                e.preventDefault();
+            }
+        });
+        $("#button").on("click", function(e) { 
+            alert("You clicked button");
+        }); 
+    </script>
+
+
+
+    </body>
+</html>

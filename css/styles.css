@@ -1,0 +1,137 @@
+main {
+    margin: 1vh 1vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section, main #aside{
+    flex: auto;
+}
+
+section{
+    width: 60%;
+
+    margin-right: 10%;
+
+    padding-left: 1%;
+
+    background-color: green;
+}
+
+section p {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+body{
+    background-color: black;
+}
+
+#btn {
+    font-size: 1.5em;
+
+    //text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+}
+
+#left, #right{
+    width: 20vw;
+
+    margin-bottom: 2vh;
+
+    padding: 1%;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-weight: 700;
+
+    color: #fff;
+    background-color: blue;
+
+    border: 3px solid #000;
+    border-radius: 0.5em;
+}
+
+#left{
+    margin-right: 5vw;
+}
+
+#right{
+    margin-left: 5vw;
+}
+
+#aside{
+    width: 15%;
+    background-color: red;
+
+    margin-left: 10%;
+}
+
+#aside p{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#aside ul{
+    list-style: none;
+
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+button{
+    margin: 0 4.9vw;
+    align-items: center;
+
+    font-size: 1.5em;
+
+    text-transform: capitalize;
+
+    padding: 2%;
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    /*main {
+      float: left;
+      width: 60%;
+    }
+    aside {
+      width: 40%;
+      float: left;
+    }*/
+
+    main{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    section, #aside {
+        width: 100%;
+
+        margin: 0;
+        padding-right: 2vw;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    /*header, main {
+      max-width: 60%;
+    }
+    aside {
+      width: 40%;
+      position: absolute;
+      top: 0; right: 0;
+      bottom: 0;
+    }*/
+  }
+
+  .hidden-jaws{
+      text-
+  }
