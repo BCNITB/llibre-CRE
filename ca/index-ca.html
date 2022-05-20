@@ -11,7 +11,7 @@
         <title></title>
         <link rel="icon" href="">
 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
@@ -27,24 +27,21 @@
 
         <main>
             <div id="aside">
-                <!--<p>Quina ajuda visual utilitzes?</p>
                 
-                <ul>
-                    <li><input type="radio" name="jaws" value="jaws">Jaws</li>
-                    <li><input type="radio" name="jaws" value="zoomtext">ZoomText</li>
-                    <li><input type="radio" name="jaws" value="cap">Cap</li>
-                </ul>
-
-                <button id="voice" disabled>Activar so</button>
-            --></div>
+                <button class="voice">Reiniciar</button>
+                <button class="voice" >Activar so</button>
+            </div>
 
             <section>
                 <article>
-                    <a role="button"  class="title" title="Pitja per llegir el conte en català" href="ca/index-ca.html">Pitja per llegir el conte en català<span class="flag" id="ca-flag"></span></a>
-                    <a role="button" lang="es" class="title" title="Pulsa para leer el cuento en castellano" href="es/index-es.html">Pulsa para leer el cuento en castellano<span class="flag" id="es-flag"></span></a>
-                    <a role="button" lang="gl" class="title" title="Preme para ler o conto en galego" href="gl/index-gl.html">Preme para ler o conto en galego<span class="flag" id="gl-flag"></span></a>
-                    <a role="button" lang="ba" class="title" title="Sakatu ipuina euskaraz irakurtzeko" href="ba/index-ba.html">Sakatu ipuina euskaraz irakurtzeko<span class="flag" id="ba-flag"></span></a>
-                    <a role="button" lang="en" class="title" title="Click to read the story in English" href="en/index-en.html">Click to read the story in English<span class="flag" id="en-flag"></span></a>
+                    <p>
+                        Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
+                    </p>
+                    
+                    <div id="btn">
+                        <a role="button" id="left" href="ca/girafa.html" title="Una Girafa"><span class="jaws-hidden"></span> una girafa <br>(línia guia)</a>
+                        <a role="button" id="right" href="ca/conill.html" title="Un Conill"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
+                    </div>
                 </article>
             </section>
         </main>

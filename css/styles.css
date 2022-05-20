@@ -21,7 +21,7 @@ section{
     background-color: green;
 }
 
-section p {
+section p, .title {
     font-weight: 700;
     font-size: 2em;
 }
@@ -30,10 +30,54 @@ body{
     background-color: black;
 }
 
+.title{
+    display: flex;
+    
+    color: black;
+    text-decoration: none;
+
+    padding: 2vh 10vw;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.flag{
+    width: 4vw;
+    height: 3.5vh;
+
+    margin: 0.5vh 1vw;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#ca-flag{
+    background-image: url('../img/cat-flag.png');
+}
+
+#es-flag{
+    background-image: url('../img/esp-flag.png');
+}
+
+#en-flag{
+    background-image: url('../img/en-flag.png');
+}
+
+#ba-flag{
+    background-image: url('../img/ba-flag.png');
+}
+
+#gl-flag{
+    background-image: url('../img/gl-flag.png');
+}
+
 #btn {
     font-size: 1.5em;
 
-    //text-transform: uppercase;
+    text-transform: uppercase;
 
     display: flex;
     justify-content: center;
@@ -73,26 +117,15 @@ body{
     margin-left: 10%;
 }
 
-#aside p{
-    font-weight: 600;
-    font-size: 1.5em;
-}
-
-#aside ul{
-    list-style: none;
-
-    font-size: 1.5em;
-    font-weight: 500;
-}
-
-button{
-    margin: 0 4.9vw;
+.voice{
+    margin: 5vh 3.5vw;
     align-items: center;
 
     font-size: 1.5em;
 
     text-transform: capitalize;
 
+    width: 10vw;
     padding: 2%;
 }
 
