@@ -16,6 +16,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <meta name="theme-color" content="#ffffff">
+
+
+
+
+        <script type="text/javascript">
+            
+        </script>
+
+
+
+
+
     </head>
 
     <body>
@@ -26,24 +38,37 @@
         </header>-->
 
         <main>
-            <div id="aside">
+            <section>
+                <p>
+                    Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
+                </p>
                 
+                <div id="btn">
+                    <a role="button" id="left" href="girafa.html" onfocusin="beepOne.play()">una girafa <br>(línia guia)</a>
+                    <audio id="beep-one" preload="auto">
+                        <source src="../sounds/prova.mp3"></source>
+                        <!--<source src="audio/beep.ogg"></source>-->
+                        Your browser isn't invited for super fun time.
+                    </audio>
+                    <a role="button" id="right" href="conill.html"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
+                    <script>
+                        var beepOne = $("#beep-one")[0];
+                        $("#btn a").onmouseover(function() {
+                            beepOne.play();
+                        });
+
+                        $("#btn a").onfocusin(function() {
+                            beepOne.play();
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <div id="aside">
+                <button class="voice">Instruccions</button>
                 <button class="voice">Reiniciar</button>
                 <button class="voice" >Activar so</button>
             </div>
-
-            <section>
-                <article>
-                    <p>
-                        Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
-                    </p>
-                    
-                    <div id="btn">
-                        <a role="button" id="left" href="ca/girafa.html" title="Una Girafa"><span class="jaws-hidden"></span> una girafa <br>(línia guia)</a>
-                        <a role="button" id="right" href="ca/conill.html" title="Un Conill"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
-                    </div>
-                </article>
-            </section>
         </main>
         
 

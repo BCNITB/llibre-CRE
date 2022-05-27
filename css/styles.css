@@ -1,8 +1,10 @@
 main {
     margin: 1vh 1vw;
 
+    text-transform: uppercase;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -11,6 +13,9 @@ main section, main #aside{
     flex: auto;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------- */
+/*                  SECTION                                                                                         */
+/* ---------------------------------------------------------------------------------------------------------------- */
 section{
     width: 60%;
 
@@ -26,6 +31,9 @@ section p, .title {
     font-size: 2em;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------- */
+/*                  BODY                                                                                         */
+/* ---------------------------------------------------------------------------------------------------------------- */
 body{
     background-color: black;
 }
@@ -75,6 +83,8 @@ body{
 }
 
 #btn {
+    margin: 5vh 0;
+    ;
     font-size: 1.5em;
 
     text-transform: uppercase;
@@ -110,6 +120,9 @@ body{
     margin-left: 5vw;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------- */
+/*                  ASIDE                                                                                         */
+/* ---------------------------------------------------------------------------------------------------------------- */
 #aside{
     width: 15%;
     background-color: red;
@@ -129,7 +142,10 @@ body{
     padding: 2%;
 }
 
-@media screen and (min-width: 481px) and (max-width: 960px) {
+/* ---------------------------------------------------------------------------------------------------------------- */
+/*                  MEDIA                                                                                         */
+/* ---------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 481px) and (max-width: 900px) {
     /*main {
       float: left;
       width: 60%;
@@ -142,7 +158,7 @@ body{
     main{
         display: flex;
         align-items: flex-start;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     section, #aside {
@@ -151,9 +167,22 @@ body{
         margin: 0;
         padding-right: 2vw;
     }
+
+    #btn a{
+        width: 100vw;
+    }
+
+    .voice{
+        margin: 5vh 0.5vw;
+            
+        font-size: 1.5em;
+    
+        width: 30vw;
+        padding: 2%;
+    }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 900px) {
     /*header, main {
       max-width: 60%;
     }
@@ -162,6 +191,18 @@ body{
       position: absolute;
       top: 0; right: 0;
       bottom: 0;
+    }*/
+    section p{
+        margin: auto;
+    }
+
+    /*.voice{
+        margin: 5vh 5.85vw;
+            
+        font-size: 1.5em;
+    
+        width: 20vw;
+        padding: 2%;
     }*/
   }
 
