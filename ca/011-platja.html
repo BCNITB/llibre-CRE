@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Conte per al coneixement bàsic del teclat">
+        <meta name="keywords" content="mecanografia, conta, infantil, inici al teclat, escull la teva aventura">
+        <meta name="author" content="CREDV-ONCE">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>A la platja</title>
+        <link rel="icon" href="../img/animations/beach.png">
+
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <meta name="theme-color" content="#ffffff">
+
+        
+
+
+        <script type="text/javascript">
+            document.addEventListener('keydown', (event) => {
+                var keyValue = event.key;
+                var codeValue = event.code;
+                var leftLink = document.getElementById("left");
+                var rightLink = document.getElementById("right");
+                switch(keyValue){
+                    case "Control":
+                        leftLink.click();   
+                        return;
+                    
+                    case "Alt":
+                        rightLink.click();   
+                        return;
+                }
+              }, false);
+        </script>
+    </head>
+
+    <body onkeyup=compile()>
+        <div class="hidden">
+            <a id="story" autofocus onfocusin="temps.play()" aria-hidden="true" href="#">play story</a>
+            <audio id="story-teller" preload="auto">
+                <source src="../sounds/ca/011.mp3">
+            </audio>
+            <script>
+                var temps = $("#story-teller")[0];
+                $("#story").onfocusin(function() {
+                    temps.play();
+                });
+            </script>
+        </div>
+        <a href="#tale" class="hidden">Saltar al conte</a>
+        <aside>
+            <h2>
+                Controls
+            </h2>
+            <div class="asside-content">
+                <button class="voice">Instruccions</button>
+                <button class="voice">Reiniciar</button>
+                <button class="voice" >Activar so</button>
+                <button class="voice" >Configurar</button>
+            </div>
+        </aside>
+
+        <main>
+            <h1>A la platja</h1>
+            
+            <article id="tale">
+                <div id="images">
+                    <img id="img01" src="../img/animations/whale.png" role="presentation" style="width: 20vw; height: auto;">
+                    <img id="img02" src="../img/animations/boy.png" role="presentation">
+                </div>
+
+                <p style="margin-top: -20vh;">
+                    Camina que caminaràs, va arribar a una platja 
+                    de sorra fina i d’aigües tranquil·les. Va 
+                    estendre la tovallola i s’hi va asseure. De 
+                    cop va veure venir:    
+                </p>                </p>
+                
+                <div id="btn">
+                    <a id="left" href="0111-filipina.html">
+                        La Balena Filipina 
+                        <span class="hidden">. Si vols que es trobi amb la balena Filipina pren la tecla Control.</span>
+                        <img class="btn" src="../img/animations/whale.png" role="presentation">
+                    </a>
+    
+                    <a id="right" href="0112-oriol.html">
+                        L'Oriol 
+                        <span class="hidden">. Si vols que es trobi amb l'Oriol prem la tecla Alt.</span>
+                        <img class="btn" src="../img/animations/boy.png" role="presentation">
+                    </a>    
+                </div>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Conte per al coneixement bàsic del teclat">
+        <meta name="keywords" content="mecanografia, conta, infantil, inici al teclat, escull la teva aventura">
+        <meta name="author" content="CREDV-ONCE">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title></title>
+        <link rel="icon" href="">
+
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <meta name="theme-color" content="#ffffff">
+
+
+
+
+        <script type="text/javascript">
+            
+        </script>
+
+
+
+
+
+    </head>
+
+    <body>
+        <!--<header>
+            <nav>
+                Esta es la barra de navegación principal del sitio
+            </nav>
+        </header>-->
+
+        <main>
+            <section>
+                <p>
+                    Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
+                </p>
+                
+                <div id="btn">
+                    <a role="button" id="left" href="girafa.html" onfocusin="beepOne.play()">una girafa <br>(línia guia)</a>
+                    <audio id="beep-one" preload="auto">
+                        <source src="../sounds/prova.mp3"></source>
+                        <!--<source src="audio/beep.ogg"></source>-->
+                        Your browser isn't invited for super fun time.
+                    </audio>
+                    <a role="button" id="right" href="conill.html"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
+                    <script>
+                        var beepOne = $("#beep-one")[0];
+                        $("#btn a").onmouseover(function() {
+                            beepOne.play();
+                        });
+
+                        $("#btn a").onfocusin(function() {
+                            beepOne.play();
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <div id="aside">
+                <button class="voice">Instruccions</button>
+                <button class="voice">Reiniciar</button>
+                <button class="voice" >Activar so</button>
+            </div>
+        </main>
+        
+
+        <!--<footer>
+        Esto es un pie de página
+        </footer>-->
+
+
+    <script type="text/javascript">
+        $('body').on("keydown", function(e) { 
+            if (e.ctrlKey && e.shiftKey && e.which === 83) {
+                //alert("You pressed Ctrl + Shift + s");
+                document.getElementById("left").click();
+                //$("left").get(0).click();
+
+                e.preventDefault();
+            }
+            if (e.which === 83) {
+                alert("You pressed Ctrl + Shift + s");
+                e.preventDefault();
+            }
+        });
+        $("#button").on("click", function(e) { 
+            alert("You clicked button");
+        }); 
+    </script>
+
+
+
+    </body>
+</html>

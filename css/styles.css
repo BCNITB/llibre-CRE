@@ -1,211 +1,119 @@
-main {
-    margin: 1vh 1vw;
-
-    text-transform: uppercase;
-
+body{
+    margin: 1vh 5vw 1vh 5vw;
+    
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-main section, main #aside{
-    flex: auto;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------- */
-/*                  SECTION                                                                                         */
-/* ---------------------------------------------------------------------------------------------------------------- */
-section{
-    width: 60%;
-
-    margin-right: 10%;
-
-    padding-left: 1%;
-
-    background-color: green;
-}
-
-section p, .title {
-    font-weight: 700;
     font-size: 2em;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------- */
-/*                  BODY                                                                                         */
-/* ---------------------------------------------------------------------------------------------------------------- */
-body{
-    background-color: black;
-}
+aside{
+    background-color: red;
 
-.title{
-    display: flex;
+    flex-grow: 4;
     
-    color: black;
-    text-decoration: none;
+    .asside-content{
+        margin: 10vh 5vw 10vh 5vw;
 
-    padding: 2vh 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    button{
+        margin: 0 0 5vh 0;
+        padding: 0.75em 1em 0.75em 1em;
+
+        font-size: 1em;
+        background-color: blue;
+    }
+
+    h2{
+        text-align: center;
+    }
 }
 
-.title:hover {
-    cursor: pointer;
+h1 {
+    text-align: center;
+}
+
+main{
+    background-color: green;
+
+    p {
+        margin: 10vh 5vw 10vh 5vw;
+    }
+}
+
+.hidden{
+    position: absolute;
+    top: -999999px;
+    left: -999999px;
+}
+
+#tale{
+    
+    #images{
+        height: 60vh;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+
+        img{
+            height: 100%;
+        }
+
+        #img01{
+            height: 50vh;
+            width: auto;
+        }
+
+        #img02{
+            height: 25vh;
+            width: auto;
+        }
+    }
+
+    p{
+        margin-top: -3vh;
+    }
+}
+
+a{
+    margin: 2vh 0 2vh 2vw;
+}
+
+#btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    a{
+        padding: 2vh 2vw;
+        border-radius: 2rem;
+        color: black;
+        background-color: gray;
+    }
+
+    img{
+        vertical-align: middle;
+    }
+}
+
+.btn{
+    width: 3vw;
 }
 
 .flag{
-    width: 4vw;
-    height: 3.5vh;
-
-    margin: 0.5vh 1vw;
-
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    margin: 0 2vw 0 2vw;
+    height: 6vh;
+    vertical-align: middle;
+    float: right;
 }
 
-#ca-flag{
-    background-image: url('../img/cat-flag.png');
-}
-
-#es-flag{
-    background-image: url('../img/esp-flag.png');
-}
-
-#en-flag{
-    background-image: url('../img/en-flag.png');
-}
-
-#ba-flag{
-    background-image: url('../img/ba-flag.png');
-}
-
-#gl-flag{
-    background-image: url('../img/gl-flag.png');
-}
-
-#btn {
-    margin: 5vh 0;
-    ;
-    font-size: 1.5em;
-
-    text-transform: uppercase;
-
+.flags{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
-
-#left, #right{
-    width: 20vw;
-
-    margin-bottom: 2vh;
-
-    padding: 1%;
-
-    text-decoration: none;
-    text-align: center;
-
-    font-weight: 700;
-
-    color: #fff;
-    background-color: blue;
-
-    border: 3px solid #000;
-    border-radius: 0.5em;
-}
-
-#left{
-    margin-right: 5vw;
-}
-
-#right{
-    margin-left: 5vw;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------- */
-/*                  ASIDE                                                                                         */
-/* ---------------------------------------------------------------------------------------------------------------- */
-#aside{
-    width: 15%;
-    background-color: red;
-
-    margin-left: 10%;
-}
-
-.voice{
-    margin: 5vh 3.5vw;
-    align-items: center;
-
-    font-size: 1.5em;
-
-    text-transform: capitalize;
-
-    width: 10vw;
-    padding: 2%;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------- */
-/*                  MEDIA                                                                                         */
-/* ---------------------------------------------------------------------------------------------------------------- */
-@media screen and (min-width: 481px) and (max-width: 900px) {
-    /*main {
-      float: left;
-      width: 60%;
-    }
-    aside {
-      width: 40%;
-      float: left;
-    }*/
-
-    main{
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    section, #aside {
-        width: 100%;
-
-        margin: 0;
-        padding-right: 2vw;
-    }
-
-    #btn a{
-        width: 100vw;
-    }
-
-    .voice{
-        margin: 5vh 0.5vw;
-            
-        font-size: 1.5em;
-    
-        width: 30vw;
-        padding: 2%;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    /*header, main {
-      max-width: 60%;
-    }
-    aside {
-      width: 40%;
-      position: absolute;
-      top: 0; right: 0;
-      bottom: 0;
-    }*/
-    section p{
-        margin: auto;
-    }
-
-    /*.voice{
-        margin: 5vh 5.85vw;
-            
-        font-size: 1.5em;
-    
-        width: 20vw;
-        padding: 2%;
-    }*/
-  }
-
-  .hidden-jaws{
-      text-
-  }

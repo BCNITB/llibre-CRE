@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <title></title>
+        <title>Tria un personantge</title>
         <link rel="icon" href="">
 
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
@@ -21,7 +21,56 @@
 
 
         <script type="text/javascript">
+            document.addEventListener('keydown', (event) => {
+                var keyValue = event.key;
+                var codeValue = event.code;
+                var leftLink = document.getElementById("left");
+                var rightLink = document.getElementById("right");
+                switch(keyValue){
+                    case "q":
+                    case "w":
+                    case "e":
+                    case "r":
+                    case "t":
+                    case "y":
+                    case "u":
+                    case "i":
+                    case "o":
+                    case "p":
+                        leftLink.click();   
+                        return;
+                    
+                        case "z":
+                        case "x":
+                        case "c":
+                        case "v":
+                        case "b":
+                        case "n":
+                        case "m":
+                        case ",":
+                        case ".":
+                        case "-":
+                            rightLink.click();   
+                            return;
+                }
+              }, false);
+
+              document.addEventListener('keyup', (event) => {
+                var keyValue = event.key;
+                var codeValue = event.code;
+                console.log("keyup event, keyValue: " + keyValue);
+                console.log("keyup event, codeValue: " + codeValue);
+              }, false);
             
+            
+            /*$("#tale-teller").onfocusin(function() {
+                temps.play();
+            });
+            function compile(){
+                var audio = document.getElementById("audio-track");
+                audio.setAttribute("src", "../sounds/ca/01_Inici.mp3")
+                audio.play();
+            }*/
         </script>
 
 
@@ -30,7 +79,32 @@
 
     </head>
 
-    <body>
+    <body onkeyup=compile()>
+        <div class="hidden">
+            <a id="story" autofocus onfocusin="temps.play()" aria-hidden="true" href="#">play story</a>
+            <audio id="story-teller" preload="auto">
+                <source src="../sounds/ca/00.mp3">
+            </audio>
+            <script>
+                var temps = $("#story-teller")[0];
+                $("#story").onfocusin(function() {
+                    temps.play();
+                });
+            </script>
+        </div>
+        <a href="#tale" class="hidden">Saltar al conte</a>
+        <aside>
+            <h2>
+                Controls
+            </h2>
+            <div class="asside-content">
+                <button class="voice">Instruccions</button>
+                <button class="voice">Reiniciar</button>
+                <button class="voice" >Activar so</button>
+                <button class="voice" >Configurar</button>
+            </div>
+        </aside>
+
         <!--<header>
             <nav>
                 Esta es la barra de navegación principal del sitio
@@ -38,65 +112,35 @@
         </header>-->
 
         <main>
-            <section>
+            <h1>Tria un personatge</h1>
+            
+            <article id="tale">
+                <div id="images">
+                    <img id="img01" src="../img/animations/giraffe.png" role="presentation">
+                    <img id="img02" src="../img/animations/rabbit.png" role="presentation">
+                </div>
+
                 <p>
-                    Temps era temps quan els animals parlaven i les flors cantaven, en un bosc molt bonic i ple deflors cantaires hi vivia:
+                    Temps era temps quan els animals parlaven i les flors cantaven, en un bosc 
+                    molt bonic i ple deflors cantaires hi vivia:
                 </p>
                 
                 <div id="btn">
-                    <a role="button" id="left" href="girafa.html" onfocusin="beepOne.play()">una girafa <br>(línia guia)</a>
-                    <audio id="beep-one" preload="auto">
-                        <source src="../sounds/prova.mp3"></source>
-                        <!--<source src="audio/beep.ogg"></source>-->
-                        Your browser isn't invited for super fun time.
-                    </audio>
-                    <a role="button" id="right" href="conill.html"><span class="jaws-hidden">Pitjar un cursor si és</span> un conill</a>
-                    <script>
-                        var beepOne = $("#beep-one")[0];
-                        $("#btn a").onmouseover(function() {
-                            beepOne.play();
-                        });
-
-                        $("#btn a").onfocusin(function() {
-                            beepOne.play();
-                        });
-                    </script>
+                    <a id="left" href="01-girafa.html">
+                        Una girafa <span class="hidden">(prem una tecla de la línia superior)</span>
+                        <img class="btn" src="../img/animations/giraffe.png" role="presentation">
+                    </a>
+                    <a id="right" href="02-conill.html">
+                        Un conill <span class="hidden">(prem una tecla de la línia inferior)</span>
+                        <img class="btn" src="../img/animations/rabbit.png" role="presentation">
+                    </a>    
                 </div>
-            </section>
-
-            <div id="aside">
-                <button class="voice">Instruccions</button>
-                <button class="voice">Reiniciar</button>
-                <button class="voice" >Activar so</button>
-            </div>
+            </article>
         </main>
         
 
         <!--<footer>
         Esto es un pie de página
         </footer>-->
-
-
-    <script type="text/javascript">
-        $('body').on("keydown", function(e) { 
-            if (e.ctrlKey && e.shiftKey && e.which === 83) {
-                //alert("You pressed Ctrl + Shift + s");
-                document.getElementById("left").click();
-                //$("left").get(0).click();
-
-                e.preventDefault();
-            }
-            if (e.which === 83) {
-                alert("You pressed Ctrl + Shift + s");
-                e.preventDefault();
-            }
-        });
-        $("#button").on("click", function(e) { 
-            alert("You clicked button");
-        }); 
-    </script>
-
-
-
     </body>
 </html>
